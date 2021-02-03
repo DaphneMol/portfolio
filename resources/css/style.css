@@ -1,0 +1,524 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+
+html,
+body {
+    margin: 0px;
+}
+
+header,
+footer {
+    font-family: Raleway;
+    margin: 0 auto;
+    padding: 5em 3em;
+    text-align: center;
+    background: #555;
+}
+
+header h1 {
+    color: #aaa;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+header span {
+    color: #222;
+}
+
+footer span {
+    color: #aaa;
+}
+
+div.container {
+    font-family: Raleway;
+    margin: 0 auto;
+    padding: 2em 2em;
+    text-align: center;
+}
+
+div.container a {
+    color: #fff;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.lime {
+    background: #13174f;
+    position: relative;
+    z-index: 4;
+}
+/* Pull up  */
+div.pullUp a:before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+    background: #fff;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUp a:hover:before {
+    height: 100%;
+}
+
+/* Pull right  */
+div.pullRight a:before {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: "";
+    background: #fff;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRight a:hover:before {
+    width: 100%;
+}
+
+/* Background */
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stars,
+.twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000
+        url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat
+        top center;
+    z-index: -60;
+    position: fixed;
+}
+
+.twinkling {
+    background: transparent
+        url(http://www.script-tutorials.com/demos/360/images/twinkling.png)
+        repeat top center;
+    z-index: -50;
+    animation: move-twink-back 200s linear infinite;
+    position: fixed;
+}
+
+.typewriter {
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 32px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+    width: 58%;
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 4.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+.typewriter h4 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+    width: 20%;
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 4.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 0 auto;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+/* Dot */
+
+.info {
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 15%;
+}
+
+span.dot {
+    height: 125%;
+    width: 62.5%;
+    background-color: #595c836a;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: -6%;
+    margin-left: 72%;
+    /* border: 1px solid orange; */
+}
+
+/* Panda */
+
+.ctn {
+    width: 360px;
+    height: 360px;
+    position: relative;
+}
+
+@media (min-height: 720px) and (min-width: 720px) {
+    .ctn {
+        transform: scale(2);
+    }
+}
+
+.ctn div {
+    position: absolute;
+}
+
+.shadow {
+    top: 285px;
+    left: 80px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+@keyframes move-body {
+    1% {
+        transform-origin: 140px 230px;
+    }
+
+    25% {
+        transform-origin: 140px 230px;
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform-origin: 140px 230px;
+        transform: rotate(0deg);
+    }
+
+    51% {
+        transform-origin: 220px 230px;
+    }
+
+    75% {
+        transform-origin: 220px 230px;
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform-origin: 220px 230px;
+        transform: rotate(0deg);
+    }
+}
+
+.section {
+    max-width: 100%;
+    position: relative;
+    margin-left: 22%;
+}
+
+.panda {
+    width: 300px;
+    height: 300px;
+    margin-top: 20%;
+    margin-left: -1%;
+    animation: 4s move-body ease-in-out infinite;
+}
+
+.body {
+    top: 110px;
+    left: 90px;
+    width: 180px;
+    height: 170px;
+    border-radius: 45%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.stripe {
+    top: 25px;
+    left: -10px;
+    width: 200px;
+    height: 90px;
+    border-radius: 0% 0% 50% 50%;
+    background-color: #1a1a1a;
+    z-index: 1;
+}
+
+.stripe:before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    width: 200px;
+    height: 50px;
+    border-radius: 0% 0% 40% 40%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.leg {
+    top: 230px;
+    left: 110px;
+    width: 60px;
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+    background-color: #1a1a1a;
+}
+
+@keyframes move-left-leg {
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.left-leg {
+    transform-origin: top center;
+    animation: 4s move-left-leg ease-in-out infinite;
+}
+
+@keyframes move-right-leg {
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.right-leg {
+    top: 230px;
+    left: 190px;
+    width: 60px;
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+    background-color: #1a1a1a;
+    transform-origin: top center;
+    animation: 4s move-right-leg ease-in-out infinite;
+}
+
+.arm {
+    width: 40px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    transform-origin: center 20px;
+}
+
+@keyframes left-wave {
+    20% {
+        transform: rotate(150deg);
+    }
+
+    30% {
+        transform: rotate(110deg);
+    }
+
+    40% {
+        transform: rotate(150deg);
+    }
+
+    50% {
+        transform: rotate(110deg);
+    }
+
+    70% {
+        transform: rotate(40deg);
+    }
+
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+.left-arm {
+    top: 135px;
+    left: 90px;
+    transform: rotate(40deg);
+    animation: 4s left-wave 2s ease-in-out infinite;
+}
+
+@keyframes right-wave {
+    20% {
+        transform: rotate(-150deg);
+    }
+
+    30% {
+        transform: rotate(-110deg);
+    }
+
+    40% {
+        transform: rotate(-150deg);
+    }
+
+    50% {
+        transform: rotate(-110deg);
+    }
+
+    70% {
+        transform: rotate(-40deg);
+    }
+
+    100% {
+        transform: rotate(-40deg);
+    }
+}
+
+.right-arm {
+    top: 135px;
+    left: 230px;
+    transform: rotate(-40deg);
+    animation: 4s right-wave ease-in-out infinite;
+}
+
+.head {
+    top: 60px;
+    left: 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.face {
+    z-index: 1;
+}
+
+.eye {
+    top: 20px;
+    left: 20px;
+    width: 24px;
+    height: 35px;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    transform-origin: center;
+    transform: rotate(35deg);
+}
+
+.pupil {
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    background-color: #1a1a1a;
+}
+
+.right-eye {
+    left: 77px;
+    transform: rotate(-35deg);
+}
+
+.ear {
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    z-index: -1;
+}
+
+.ear:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    z-index: -1;
+}
+
+.nose {
+    top: 40px;
+    left: 54px;
+    width: 12px;
+    height: 8px;
+    border-radius: 45%;
+    background-color: #1a1a1a;
+}
+
+.mouth {
+    top: 55px;
+    left: 48px;
+    width: 16px;
+    height: 6px;
+    border: 4px solid #1a1a1a;
+    border-radius: 5px 5px 20px 20px;
+    background-color: #ff8080;
+}
+
+footer {
+    background-color: #13174f;
+    color: white;
+}
