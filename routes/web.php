@@ -28,9 +28,12 @@ Route::get('/work', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::resource('work', 'ViewController');
 
+Route::resource('werken', 'WerkController');
 
+Route::post('update', 'WerkController@update');
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+// Route::group(['prefix' => 'admin'], function () {
+//     Voyager::routes();
+// });

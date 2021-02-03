@@ -1,0 +1,35 @@
+h2 {
+    color: white;
+    margin: 0;
+    display: inline;
+}
+
+.projects {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #595c836a;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    flex-wrap: wrap;
+}
+
+.projects li {
+    display: inline-block;
+    margin: 0 auto;
+    width: 40vw;
+    text-align: center;
+}
+
+.projects li .image_project {
+    max-width: 100px;
+    max-height: 100px;
+    display: inline;
+}
+
+.image_project img {
+    float: right;
+}
